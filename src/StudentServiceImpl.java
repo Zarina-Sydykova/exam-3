@@ -49,7 +49,7 @@ public class StudentServiceImpl implements StudentService{
     @Override
     public Student getByName() {
 
-        return studentList.stream().filter(student -> student.getName().equals(name)).findAny();
+        return studentList.stream().filter(student -> student.getName().equals(name)).findAny().orElseThrow();
     }
 
     @Override
